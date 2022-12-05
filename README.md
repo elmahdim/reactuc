@@ -5,7 +5,7 @@ Reusable react components to maximize your coding efficiency.
 ## Install
 
 ```shell
-npm i reactuc
+npm i @melmahdi/reactuc
 ```
 
 ## Components
@@ -22,6 +22,8 @@ npm i reactuc
 Conditional rendering component
 
 ```ts
+import { If } from "@melmahdi/reactuc";
+
 <If condition={condition: 1 | 0} otherwise={otherwise: ReactNode}>
   ...
 </If>
@@ -32,6 +34,8 @@ Conditional rendering component
 Component to handle broken images
 
 ```ts
+import { Image } from "@melmahdi/reactuc";
+
 <Image fallback={...} src="..." alt="..." />
 ```
 
@@ -42,12 +46,16 @@ Component to handle iterations.
 Display list of paragraph (with html tag):
 
 ```ts
-<Iterate data={['...', '...', '...']} element="p" />
+import { Iterate } from '@melmahdi/reactuc';
+
+<Iterate data={['...', '...', '...']} element="p" />;
 ```
 
 Display list of objects (with component):
 
 ```ts
+import { Iterate } from "@melmahdi/reactuc";
+
 const cards = [
   { id: '75ebc192', title: 'Lira Fresh Optimization' },
   ...
@@ -61,6 +69,8 @@ const cards = [
 Table component
 
 ```ts
+import { Table } from "@melmahdi/reactuc";
+
 const tableData = {
   head: ['First', <button type="button">Action</button>],
   body: [
